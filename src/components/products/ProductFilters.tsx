@@ -108,6 +108,7 @@ export const ProductFilters = ({ filters, onFiltersChange, maxPrice }: ProductFi
             data-agent-action="filter-by-category"
             data-agent-state="filters.category"
             data-agent-controls="products.grid"
+            data-agent-options={['all|All Categories', ...categories.map((c) => `${c.id}|${c.name}`)].join(';')}
             className="w-full sm:w-40"
           >
             <SelectValue placeholder="Category" />
@@ -149,6 +150,7 @@ export const ProductFilters = ({ filters, onFiltersChange, maxPrice }: ProductFi
             data-agent-action="sort-products"
             data-agent-state="filters.sortBy"
             data-agent-controls="products.grid"
+            data-agent-options="newest|Newest;rating|Top Rated;price-asc|Price: Low to High;price-desc|Price: High to Low"
             className="w-full sm:w-40"
           >
             <SelectValue placeholder="Sort by" />
@@ -227,6 +229,7 @@ export const ProductFilters = ({ filters, onFiltersChange, maxPrice }: ProductFi
                   data-agent-action="filter-by-rating"
                   data-agent-state="filters.minRating"
                   data-agent-controls="products.grid"
+                  data-agent-options="any|Any rating;4|4+ stars;4.5|4.5+ stars"
                 >
                   <SelectValue placeholder="Any rating" />
                 </SelectTrigger>

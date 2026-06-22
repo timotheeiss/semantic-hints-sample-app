@@ -201,6 +201,7 @@ const AdminPage = () => {
                         data-agent-id="admin.field.category"
                         data-agent-role="select"
                         data-agent-state="product.category"
+                        data-agent-options={categories.map((c) => `${c.id}|${c.name}`).join(';')}
                       >
                         <SelectValue />
                       </SelectTrigger>
